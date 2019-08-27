@@ -412,7 +412,7 @@
  	 <i class="fa fa-calendar-o"></i>
 	</span>
 	<span class="post-meta-item-text">字数统计:</span>
-	<span class="post-count">1,252(字)</span>
+	<span class="post-count">1,250(字)</span>
 	</span>
 
 	<span class="post-time">
@@ -526,8 +526,8 @@
 <h4 id="Cask-必装的理由"><a href="#Cask-必装的理由" class="headerlink" title="Cask 必装的理由"></a>Cask 必装的理由</h4><p>有图形界面的软件可以直接在 App Stroe 中下载更新，为啥还需要 Cask 呢？因为有的很好用的免费 Mac 软件并没有选择在 App Store 上架，对于没有上架的软件我们只能是通过搜索找到官网然后在下载安装包，这样不够优雅也不方便管理，而使用 Cask 可以通过一行命令就搞定安装了，还可以统一更新升级所有的软件，实现从非 App Store 途径安装的软件的统一管理。<br>Cask 从软件官方网站下载软件包，然后在后台安装并将 <code>.app</code> 移动到 <code>Applications</code>。通过 Cask 安装的软件也会在 Lanuchpad 显示，跟从 App Store 安装的软件没啥区别。对于那些收费的软件，用 Cask 安装只是比普通安装方法节省了时间和步骤，没啥其他的区别。</p>
 <h4 id="Cask常用命令"><a href="#Cask常用命令" class="headerlink" title="Cask常用命令"></a>Cask常用命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew cask -help 查看帮助</span><br><span class="line">brew cask install &lt;software name&gt; 安装软件</span><br><span class="line">brew cask install google-chrome  #安装Chrome</span><br><span class="line">brew cask uninstall &lt;software name&gt; 卸载软件</span><br><span class="line">brew cask search &lt;software name&gt; 搜索软件</span><br><span class="line">brew cask info &lt;software name&gt; 查看软件相关信息</span><br><span class="line">brew cask list 列出通过 Homebrew-Cask 安装的包</span><br></pre></td></tr></table></figure>
 <h3 id="卸载Homebrew"><a href="#卸载Homebrew" class="headerlink" title="卸载Homebrew"></a>卸载Homebrew</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd `brew --prefix`</span><br><span class="line">rm -rf Cellar</span><br><span class="line">brew prune</span><br><span class="line">rm `git ls-files`</span><br><span class="line">rm -r Library/Homebrew Library/Aliases Library/Formula Library/Contributions</span><br><span class="line">rm -rf .git</span><br><span class="line">rm -rf ~/Library/Caches/Homebrew</span><br></pre></td></tr></table></figure>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>小结<br>电脑里的第三方应用越多，HomeBrew 的优势越明显。</p>
-<p>如果只下载一个应用，可能径自前往其官网也不会觉得麻烦，但如果你每次下载第三方应用就要前往官网、每次更新都得去其菜单栏中寻找 update 按钮，那显然是不便的。HomeBrew 就为这些的零碎的操作提供了一个集中的管理办法。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>电脑里的第三方应用越多，HomeBrew 的优势越明显。</p>
+<p>如果只下载一个应用，可能径自前往其官网也不会觉得麻烦，但如果你每次下载第三方应用就要前往官网、每次更新都得去其菜单栏中寻找 update 按钮，那显然是不便的。HomeBrew 就为这些的零碎的操作<strong>提供了一个集中的管理办法</strong>。</p>
 <p>学会了本文的几条命令，对你来说 HomeBrew 就不再是晦涩的命令行工具，而是一个简单好用的第三方应用版 App Store。</p>
 <p><font color="red" size="10">非常方便！</font></p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>少数派上的专题<a href="https://sspai.com/topic/181" target="_blank" rel="noopener">Homebrew，Mac 应用管家</a><br><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="noopener">Mac 开发配置手册</a></p>
@@ -540,8 +540,8 @@
     
       <div>
     
-        <div style="text-align:center;color: #FF88C2;font-size:18px;">-------------谢谢阅读<i class="fa fa-handshake-o" aria-hidden="true"></i>个人观点-------------</div>
- <div style="text-align:center;color: #FF44AA;font-size:18px;">-------------本文结束<i class="fa fa-paw"></i>欢迎评论-------------</div>
+        <div style="text-align:center;color: #FF88C2;font-size:18px;">-------------本文结束<i class="fa fa-handshake-o" aria-hidden="true"></i> 谢谢阅读-------------</div>
+ <div style="text-align:center;color: #FF44AA;font-size:18px;">-------------若有错误<i class="fa fa-paw"></i>欢迎评论-------------</div>
     
 </div>
     
@@ -621,8 +621,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/21/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/01/next1/" rel="prev" title="Hexo搭建blog使用Next主题 配置以及美化方法（必看必学一）">
+                Hexo搭建blog使用Next主题 配置以及美化方法（必看必学一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -712,7 +712,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -734,7 +734,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
