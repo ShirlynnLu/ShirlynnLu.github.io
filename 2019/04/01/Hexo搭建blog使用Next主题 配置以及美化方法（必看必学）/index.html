@@ -414,7 +414,7 @@
  	 <i class="fa fa-calendar-o"></i>
 	</span>
 	<span class="post-meta-item-text">字数统计:</span>
-	<span class="post-count">5,707(字)</span>
+	<span class="post-count">5,691(字)</span>
 	</span>
 
 	<span class="post-time">
@@ -602,8 +602,11 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 <p>添加之后再执行<code>hexo d -g</code>，然后再刷新页面就能看到效果</p>
-<p><strong>==2019.3.31 修复不蒜子域名失效==</strong><br>在对博客响应速度进行优化的时候发现busuanzi.pure.mini.js这个文件报404错误，后来查阅资料得知不蒜子的域名发生了变化。<br>参考博客解决不蒜子无法使用问题将<code>busuanzi-counter.swig</code>中的域名dn-lbstatics.qbox.me修改为<strong>busuanzi.ibruce.info</strong>即可。</p>
-<p>修改的两个文件为：<br><strong>busuanzi-counter.swig </strong><br>(路径: themes/next/layout/_third-party/analytics/busuanzi-counter.swig和themes/next_6.2/layout/_third-party/analytics/busuanzi-counter.swig,因为自己升级主题到了6.2,所以需要修改两处)<br><strong>footer.swig</strong><br>（路径：themes/next/layout/_partials/footer.swig）</p>
+<p><strong>==2019.3.31 修复不蒜子域名失效==</strong><br><strong>==新方法==</strong><br>使用不蒜子添加总访问量</p>
+<p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a><br>使用功能就更加简单，找到 next 主题的页脚文件 <code>foot.swg</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim themes/next/layout/_partials/footer.swig</span><br></pre></td></tr></table></figure>
+<p>添加如下代码即可:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot; class=&quot;theme-info&quot;&gt;</span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line">  &lt;span id=&quot;busuanzi_container_site_uv&quot; class=&quot;theme-info&quot;&gt;</span><br><span class="line">&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="9-添加进度条"><a href="#9-添加进度条" class="headerlink" title="9. 添加进度条"></a>9. 添加进度条</h3><p>首先需要查看当前NexT的版本号？<br>如何查看当前NexT主题的版本号呢，打开<code>主题配置文件_config.yml</code>,最下方就显示了当前的版本号。</p>
 <p>版本5.1.3只需要在主题配置文件中找到pace属性，将其修改为true就可以了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
@@ -772,8 +775,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/21/index/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/01/index/" rel="prev" title="SSH简明教程入门">
+                SSH简明教程入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -863,7 +866,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
